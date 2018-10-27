@@ -1,3 +1,11 @@
+
+sudo apt-get remove vim
+
+sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
+    libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+    libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
+    python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev git
+
 git clone https://github.com/vim/vim.git
 cd vim/src
 make distclean
@@ -22,6 +30,8 @@ make distclean
             --with-features=huge
 make
 sudo make install
+
+sudo apt-get install vim-gui-common vim-runtime
 
 cd ../..
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
